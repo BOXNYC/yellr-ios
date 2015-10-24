@@ -566,9 +566,9 @@ func fetchBackgroundDataAndShowNotification() -> Bool{
     } else if (hasNewAssignments && !hasNewStories) {
         if (hasNewAssignmentsCount > 1) {
             //localNotification.alertBody = "You have \(hasNewAssignmentsCount) new assignments"
-            localNotification.alertBody = "You have new assignments to view"
+            localNotification.alertBody = "You have new questions to view"
         } else {
-            localNotification.alertBody = "You have a new assignment to view"
+            localNotification.alertBody = "You have a new question to view"
         }
         scheduleNotifications = true
     } else if (!hasNewAssignments && hasNewStories) {

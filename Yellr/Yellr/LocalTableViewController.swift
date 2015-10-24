@@ -998,6 +998,7 @@ class LocalTableViewController: UITableViewController, CLLocationManagerDelegate
         if let name = defaults.stringForKey(YellrConstants.Keys.FirstTimeUserKey) {
             
             //Not a first time user
+            Yellr.println("\(name)")
             
         } else {
             

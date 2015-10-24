@@ -12,6 +12,8 @@
 		260488AC1B1EF0D800D781FE /* StoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260488AB1B1EF0D800D781FE /* StoriesTableViewCell.swift */; };
 		26157ECA1B1A245700615428 /* LocalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26157EC91B1A245700615428 /* LocalTableViewCell.swift */; };
 		2616AC831B5C3FB200CB5808 /* LocalPostStoredDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2616AC811B5C3FB200CB5808 /* LocalPostStoredDataModel.xcdatamodeld */; };
+		2633D7B41BD9800500D77684 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2633D7B21BD9800500D77684 /* Fabric.framework */; settings = {ASSET_TAGS = (); }; };
+		2633D7B51BD9800500D77684 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2633D7B31BD9800500D77684 /* Crashlytics.framework */; settings = {ASSET_TAGS = (); }; };
 		263546D81B87E30000B4E6D4 /* RegexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263546D71B87E30000B4E6D4 /* RegexString.swift */; };
 		263E1B6B1B18D36A0063E9C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E1B6A1B18D36A0063E9C6 /* AppDelegate.swift */; };
 		263E1B721B18D36A0063E9C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263E1B701B18D36A0063E9C6 /* Main.storyboard */; };
@@ -68,6 +70,8 @@
 		260488AB1B1EF0D800D781FE /* StoriesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesTableViewCell.swift; sourceTree = "<group>"; };
 		26157EC91B1A245700615428 /* LocalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalTableViewCell.swift; sourceTree = "<group>"; };
 		2616AC821B5C3FB200CB5808 /* LocalPostStoredDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalPostStoredDataModel.xcdatamodel; sourceTree = "<group>"; };
+		2633D7B21BD9800500D77684 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		2633D7B31BD9800500D77684 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		263546D71B87E30000B4E6D4 /* RegexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexString.swift; sourceTree = "<group>"; };
 		263E1B651B18D36A0063E9C6 /* Yellr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yellr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		263E1B691B18D36A0063E9C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2661C8831B27D45F00CC681F /* CoreLocation.framework in Frameworks */,
+				2633D7B51BD9800500D77684 /* Crashlytics.framework in Frameworks */,
+				2633D7B41BD9800500D77684 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +170,8 @@
 		263E1B671B18D36A0063E9C6 /* Yellr */ = {
 			isa = PBXGroup;
 			children = (
+				2633D7B21BD9800500D77684 /* Fabric.framework */,
+				2633D7B31BD9800500D77684 /* Crashlytics.framework */,
 				2661C8EA1B2A353C00CC681F /* MBProgressHUD */,
 				2645436D1B221CFF00B8EA79 /* DataModels */,
 				2645436C1B221CEF00B8EA79 /* ViewModels */,
@@ -304,6 +312,7 @@
 				263E1B611B18D36A0063E9C6 /* Sources */,
 				263E1B621B18D36A0063E9C6 /* Frameworks */,
 				263E1B631B18D36A0063E9C6 /* Resources */,
+				2633D7B11BD97F9D00D77684 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -400,6 +409,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2633D7B11BD97F9D00D77684 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 6372df88cd7921ce39bc77f5f5a567be4143671a effa7897537cfe62f0e1fab1001e22dbda6a21e69e8e55822c1caddacdbf2dac";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		263E1B611B18D36A0063E9C6 /* Sources */ = {
@@ -577,6 +602,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Debjit Saha (F9EU8LF4ZQ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Debjit Saha (F9EU8LF4ZQ)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Yellr",
+				);
 				INFOPLIST_FILE = Yellr/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -596,6 +625,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Debjit Saha (F9EU8LF4ZQ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Debjit Saha (F9EU8LF4ZQ)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Yellr",
+				);
 				INFOPLIST_FILE = Yellr/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

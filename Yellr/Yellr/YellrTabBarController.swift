@@ -33,7 +33,10 @@ class YellrTabBarController: UITabBarController, UITabBarControllerDelegate {
         //let item2 = tabBar.items?[1] as! UITabBarItem
         //let item3 = tabBar.items?[2] as! UITabBarItem
         
-        let itemWidth = tabBar.frame.width / 3
+        //we ndo not need stories any more
+        //so equally divide the space between
+        //the two tabs
+        let itemWidth = tabBar.frame.width / 2
         
         //underline yellow bars for tabs
         let selectedBar1 = UIView(frame: CGRectMake(0, tabBar.frame.height+5, itemWidth, 6))
@@ -46,6 +49,7 @@ class YellrTabBarController: UITabBarController, UITabBarControllerDelegate {
         selectedBar2.hidden = true
         selectedBar2.backgroundColor = UIColorFromRGB(YellrConstants.Colors.yellow)
         
+        //we do not need stories anymore
         let selectedBar3 = UIView(frame: CGRectMake(0+2*itemWidth, tabBar.frame.height+5, itemWidth, 6))
         selectedBar3.tag = YellrConstants.TagIds.BottomTabStories
         selectedBar3.hidden = true
@@ -53,7 +57,7 @@ class YellrTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         tabBar.addSubview(selectedBar1)
         tabBar.addSubview(selectedBar2)
-        tabBar.addSubview(selectedBar3)
+        //tabBar.addSubview(selectedBar3)
         
         //Yellr.println(tabBarController?.selectedIndex)
         

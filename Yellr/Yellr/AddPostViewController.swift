@@ -76,8 +76,8 @@ class AddPostViewController: UIViewController, UINavigationControllerDelegate, U
         vdoBtn.titleLabel?.textAlignment = .Center
         vdoBtn.backgroundColor = UIColorFromRGB(YellrConstants.Colors.yellow)
         //temp change for app store submission
-        //vdoBtn.backgroundColor = UIColorFromRGB(YellrConstants.Colors.light_grey)
-        //vdoBtn.enabled = false
+        vdoBtn.backgroundColor = UIColorFromRGB(YellrConstants.Colors.light_grey)
+        vdoBtn.enabled = false
         vdoBtn.layer.cornerRadius = 20
         
         recordBtn.setTitleColor(UIColorFromRGB(YellrConstants.Colors.black), forState: .Normal)
@@ -86,8 +86,8 @@ class AddPostViewController: UIViewController, UINavigationControllerDelegate, U
         recordBtn.titleLabel?.textAlignment = .Center
         recordBtn.backgroundColor = UIColorFromRGB(YellrConstants.Colors.yellow)
         //temp change for app store submission
-        //recordBtn.backgroundColor = UIColorFromRGB(YellrConstants.Colors.light_grey)
-        //recordBtn.enabled = false
+        recordBtn.backgroundColor = UIColorFromRGB(YellrConstants.Colors.light_grey)
+        recordBtn.enabled = false
         recordBtn.layer.cornerRadius = 20
         
         if (postTitle != nil) {
